@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* padding-bottom: 20px; */
+    /* opacity: 0.98; */
+}
+#banner1::before{
+    content: "";
+    background:url('Bg_3.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.98; */
+    filter: blur(2px);
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    
+}
+.card-img{
+    background: url("OP1.jpg") center/cover no-repeat;
+}
+.banner h2{
+    text-shadow: 2px 2px 4px #000000;
+    word-spacing: 1rem;
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-weight:600;
+}
+.card-content{
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #fff;
+    height: 350px;
+}
+.card-content h3{
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], select{
+    color: #000000;
+}
+form input[type = submit]{
+    color: #fff;
+    background: #ff7261;
+    padding: 12px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    opacity: 0.9;
+}
+@media(max-width: 962px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 90%;
+    }
+    .card-img{
+        height: 350px;
+        object-fit: contain;
+    }
+    .banner h2{
+        margin-top:30px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    #banner1::before{
+        background:url('Bg_4.jpg') no-repeat center center/cover;
+        height: 900px;
+        filter: blur(1px);
+
+    }
+}
+@media(max-width: 450px){
+    .banner h2{
+        margin-top:30px;
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}

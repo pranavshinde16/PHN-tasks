@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reservation Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+    <section class="banner">
+        <h2><span class="auto-input"></span></h2>
+        <div class="card-container">
+            <div class="card-img">
+                <!-- image here -->
+            </div>
+
+            <div class="card-content" id="banner1">
+                <h3>Reservation</h3>
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="number" placeholder="Phone Number" required>
+                    </div>
+                    <div>
+                        <div class="form-row">
+                            <input type="email" placeholder="Enter your email" required>
+                            <input type="text" placeholder="Select Date" onfocus="(this.type='date')"
+                                onblur="(this.type='text')" required>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <select name="hours">
+                            <option value="hour-select" class="TimeSelect">Select Time</option>
+                            <option value="10">13 : 00</option>
+                            <option value="10">14 : 00</option>
+                            <option value="10">16 : 00</option>
+                            <option value="10">18 : 00</option>
+                            <option value="10">20 : 00</option>
+                            <option value="10">22 : 00</option>
+                        </select>
+                        <input type="number" placeholder="No. of Guests ?" min="1">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Message" min="1">
+                        <input onclick="Submission()" type="submit" value="BOOK TABLE">
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function Submission() {
+            alert("Your table reservation has been done")
+        }
+
+        var typed = new Typed('.auto-input', {
+        strings: ["Welcome to Le Meridien","BOOK YOUR TABLE NOW"],
+        typeSpeed: 85,
+        backSpeed: 85,
+        loop: true
+    });
+    </script>
+</body>
+
+</html>
